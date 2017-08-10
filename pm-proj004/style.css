@@ -1,0 +1,16 @@
+/*ul,li, a:link {
+    width: 100%;
+    margin: 5px;
+    /*border: 1px;*/
+    
+    
+}
+*/
+
+ul, li, a:link {
+    border: 1px solid #000;
+    background-color: chartreuse;
+    border-style: solid;
+    text-decoration: none;
+    list-style: none;
+}
