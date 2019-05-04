@@ -48,10 +48,9 @@ function calculaAnosAposentadoria(idadePessoa, idadeMinima) {
 		 os anos que faltam para aposentadoria.
 *******************************************************************************/
 
-function mostrarMensagem(idade) {
-	return calculaAnosAposentadoria();
-}
-alert('faltam ' + calculaAnosAposentadoria(30,60) +' anos' + ' para a sua aposentadoria ');
+function mostrarMensagem(idadePessoa, idadeMinima) {
+	  return 'Faltam ' + calculaAnosAposentadoria(idadePessoa, idadeMinima) +' anos' + ' para a sua aposentadoria';
+	 }
 
 
 /******************************************************************************* 
