@@ -31,7 +31,7 @@ function boletimEscolar(nota) {
 	}else {
 		porcentagem = (nota * 60) / 100;
 		porcentagem = porcentagem * 10;
-		if (porcentagem === 60) {
+		if(porcentagem === 60) {
 			return 'Aprovado';
 		}else {
 			return 'Reprovado';
