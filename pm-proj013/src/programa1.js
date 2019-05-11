@@ -25,12 +25,12 @@ function termostato(temperatura) {
 *******************************************************************************/
 
 function boletimEscolar(nota) {
-	if (nota < 0 || nota > 10) {
+	if(nota < 0 || nota > 10) {
 		return 'Nota inválida';
-	}else if (nota >= 0 || nota >= 10) {
+	}else if(nota >= 0 || nota >= 10) {
 		media = nota;
 		media = (nota * 100) / 10;
-		if (media >= 60) {
+		if(media >= 60) {
 			return 'Aprovado';
 		}else {
 			return 'Reprovado';
