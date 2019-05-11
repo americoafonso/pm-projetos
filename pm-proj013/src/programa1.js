@@ -24,21 +24,19 @@ function termostato(temperatura) {
 		aprovação é 60%.
 *******************************************************************************/
 
-
 function boletimEscolar(nota) {
-	if(nota < 0 || nota > 10) {
+	if (nota < 0 || nota > 10) {
 		return 'Nota inválida';
-	}else {
-		porcentagem = (nota * 60) / 100;
-		porcentagem = porcentagem * 10;
-		if(porcentagem === 60) {
+	}else if (nota >= 0 || nota >= 10) {
+		media = nota;
+		media = (nota * 100) / 10;
+		if (media >= 60) {
 			return 'Aprovado';
 		}else {
 			return 'Reprovado';
 		}
 	}
 }
-
 
 /*******************************************************************************
 	Tarefa 3:
