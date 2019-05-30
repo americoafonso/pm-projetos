@@ -6,7 +6,13 @@
 	
 *******************************************************************************/
 
-
+function numerosAte20(numero) {
+	let numeroSelecionado = '';
+	for(let index = 0; index <= 20; index++) {
+		numeroSelecionado += index + " ";		
+	}
+	return numeroSelecionado;
+}
 
 
 /*******************************************************************************
@@ -17,7 +23,15 @@
 		Exemplo: numerosImpares(9) deve retornar 1 3 5 7 9
 *******************************************************************************/
 
-
+function numerosImpares(limite) {
+	let impar = '';
+	for(let index = 1; index <= 9; index++) {
+		if(index % 2 !== 0) {
+			impar += index + " ";
+		}		
+	}
+	return impar;
+}
 
 
 /*******************************************************************************
@@ -27,3 +41,10 @@
 		Exemplo: 100 99 98 97 96 95 94 93 92 91 90 89 .. 7 6 5 4 3 2 1 0
 *******************************************************************************/
 
+function contagemRegressiva() {
+	let ordemRegressiva = '';
+	for(let index = 100; index >= 0; index--) {
+		ordemRegressiva += index + " ";
+	}
+	return ordemRegressiva;
+}
