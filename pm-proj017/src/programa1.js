@@ -15,7 +15,24 @@
 
 *******************************************************************************/
 
+class Motor {
+	constructor(cilindradas, combustivel) {
+		this.cilindradas = cilindradas;
+		this.combustivel = combustivel;
+	}
 
+	ligar() {
+		return "Motor 2000 cilindradas a gasolina está ligado";
+	}
+
+	desligar() {
+		return "Motor 1000 cilindradas a àlcool está desligado";
+	}
+}
+
+motor = new Motor(2000, 'gasolina').ligar();
+
+motor = new Motor(1000, 'álcool').desligar();
 
 
 
@@ -44,10 +61,36 @@
 		
 *******************************************************************************/
 
+class Calculadora {
+	constructor(num1, num2) {
+		this.num1 = num1;
+		this.num2 = num2;
+	}
 
+	somar() {
+		return this.num1 + this.num2;
+	}
 
+	subtrair() {
+		return this.num1 - this.num2;
+	}
 
+	multiplicar() {
+		return this.num1 * this.num2;
+	}
 
+	dividir() {
+		return this.num1 / this.num2;
+	}
+}
+
+calculadora = new Calculadora(10, 2).somar();
+
+calculadora = new Calculadora(10, 2).subtrair();
+
+calculadora = new Calculadora(10, 2).multiplicar();
+
+calculadora = new Calculadora(10, 2).dividir();
 
 
 /*******************************************************************************
@@ -77,13 +120,27 @@
 
 *******************************************************************************/
 
+/*Inicio e declaracao da class Calendario */
+class Calendario {
 
+	//today = new Date();
 
+	/*Inicio do primeiro metodo estatico */
+	static nomeDias() {
+		return [ 'domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado' ];
+	}
+	/*Fim do primeiro metodo estatico */
 
+	/*Inicio do segundo metodo estatico */
+	static diaSemana(today) {
+		today = new Date(today);
+		console.log(today);
+		return this.nomeDias(today.getDay());
+	}
+	/*Fim do segundo metodo estatico */	
 
-
-
-
+}
+Calendario.diaSemana('31/12/2019');
 
 /*******************************************************************************
 	
