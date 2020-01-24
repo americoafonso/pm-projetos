@@ -123,24 +123,19 @@ calculadora = new Calculadora(10, 2).dividir();
 /*Inicio e declaracao da class Calendario */
 class Calendario {
 
-	//today = new Date();
-
-	/*Inicio do primeiro metodo estatico */
 	static nomeDias() {
-		return [ 'domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado' ];
+	  let semana = ["domingo", "segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado"];
+	  return semana;
 	}
-	/*Fim do primeiro metodo estatico */
-
-	/*Inicio do segundo metodo estatico */
+  
 	static diaSemana(today) {
-		today = new Date(today);
-		console.log(today);
-		return this.nomeDias(today.getDay());
+	  this.today = new Date(today);
+	  return today;
 	}
-	/*Fim do segundo metodo estatico */	
-
-}
-Calendario.diaSemana('31/12/2019');
+  
+  }
+  console.log('dia da semana:');
+  console.log(Calendario.diaSemana('23/01/2020'));
 
 /*******************************************************************************
 	
