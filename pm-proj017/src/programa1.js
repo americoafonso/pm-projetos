@@ -128,15 +128,16 @@ class Calendario {
 	  return semana;
 	}
   
-	static diaSemana(today) {
-	  this.today = new Date(today);
-	  return today;
+	static diaSemana(str) {
+	  let partes = str.split('/').map(Number);
+	  let today = new Date('20' + partes[2], partes[1] - 1, partes[0]);
+	  let week = this.semana[this.today.getDay() % 7];
+	  return [week.slice(0, 13) + ''].join(' ');
 	}
-  
   }
-  console.log('dia da semana:');
-  console.log(Calendario.diaSemana('23/01/2020'));
-
+  console.log('Hoje e:');
+  console.log(Calendario.diaSemana('31/12/2019'));
+  
 /*******************************************************************************
 	
 	Tarefa 4:
