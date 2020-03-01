@@ -1,0 +1,40 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    text-align: center;
+}
+
+.card {
+    height: 240;
+    text-align: left;
+}
+
+.card label {
+    display: block;
+    padding-top: 15px;
+    padding-left: 15px;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+}
+
+.card.altura {
+    background-color: #3498DB;
+}
+
+.card.peso {
+    background-color: #39495E;
+}
+
+button {
+    width: 90%;
+    font-size: 72px;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    padding: 25px;
+    margin-top: 15px;
+}

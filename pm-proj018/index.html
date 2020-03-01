@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Projeto 011</title>
+    <link rel="stylesheet" href="Css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Css/estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card altura">
+            <label for="altura">Altura em metros</label>
+            <input type="number" id="altura" name="altura">
+        </div>
+
+        <div class="card peso">
+            <label for="peso">Peso em quilos</label>
+            <input type="number" id="peso" name="peso">
+        </div>
+
+        <div class="dinamico">
+            <button class="botaoIMC">IMC</button>
+        </div>
+
+        <div class="resultado">
+            <a href="#" class="voltar">
+                <span>Voltar</span>
+            </a>
+            <div class="texto">
+                <p class="imcValor">41,5</p>
+                <small class="imcDesc">Obesidade Morbida</small>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/comportamento.js"></script>
+</body>
+
+</html>
