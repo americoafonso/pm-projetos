@@ -1,0 +1,159 @@
+body {
+    font-family: 'Lato', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.botao {
+    background-color: #90EE90;
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-decoration: none;
+    box-shadow: 0px 6px 0px 0px #FFFFE0;
+    font-size: 36px;
+    border-radius: 5px;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    margin-bottom: -150px;
+}
+
+header nav ul {
+    padding-right: 60px;
+    margin: 0;
+    margin-top: 20px;
+}
+
+header nav li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 50px;
+}
+
+header nav li:last-child {
+    border: 1px solid #666;
+    border-radius: 8px;
+    padding: 10px 30px 10px 30px;
+    text-align: center;
+}
+
+header nav li a {
+    color: #666;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+section#topo .chamada {
+    color: #666;
+    margin-top: 250px;
+    text-align: center;
+}
+
+section#topo .chamada h1 {
+    font-size: 50px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+section#topo .chamada p {
+    font-size: 36px;
+    margin: 0;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/*Section 2*/
+section#conheca {
+    padding: 70px;
+}
+
+section#conheca .texto {
+    padding: 70px;
+    padding-top: 30px;
+}
+
+section#conheca .texto h2 {
+    font-size: 36px;
+}
+
+section#conheca .texto p {
+    font-size: 24px;
+}
+
+section#conheca .texto a {
+    width: 60%;
+    font-size: 30px;
+}
+
+section#Saiba {
+    /* background-color: rgb(121, 209, 160); */
+    border-top: 4px solid #1a1d1b;
+}
+
+/*Section 3*/
+section#Saiba .container {
+    flex-direction: column;
+    align-items: center;
+    padding: 70px;
+    padding-bottom: 50px;
+}
+
+section#Saiba img {
+    width: 150px;
+    height: 150px;
+}
+
+section#Saiba p {
+    font-size: 24px;
+    width: 80%;
+    text-align: center;
+}
+
+img {
+    border-radius: 50%;
+}
+
+/*Section 4*/
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 30px;
+    padding-bottom: 30px;
+    margin-top: 4px;
+}
+
+@media (max-width: 600px) {
+    header nav {
+        display: none;
+    }
+    header h1 {
+        margin-left: 20px;
+    }
+    section#topo {
+        padding: 10px;
+    }
+    section#conheca .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    section#conheca .container .texto {
+        padding: 10px;
+    }
+    section#conheca .container .texto a {
+        width: 100%;
+    }
+    section#convite form {
+        display: block;
+        text-align: center;
+        width: 80%;
+    }
+}
