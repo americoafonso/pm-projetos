@@ -1153,7 +1153,7 @@ craftsmanship across South Florida.</p>
       current = idx;
       const pv = perView();
       const cardWidth = cards[0].offsetWidth + 24;
-      slider.style.transform = translateX(-${current * pv * cardWidth}px);
+      slider.style.transform = `translateX(-${current * pv * cardWidth}px)`;
       dotsContainer.querySelectorAll('.slider-dot').forEach((d, i) => d.classList.toggle('active', i === current));
     }
 
