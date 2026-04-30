@@ -11,18 +11,18 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --orange: #f97316;
-    --orange-dark: #ea6a0a;
-    --dark: #0f1117;
-    --dark2: #1a1d27;
-    --dark3: #23273a;
+    --orange: #0891b2;
+    --orange-dark: #0e7490;
+    --dark: #000000;
+    --dark2: #0a0a0a;
+    --dark3: #111111;
     --gray: #6b7280;
     --gray-light: #9ca3af;
     --text: #e5e7eb;
     --text-light: #9ca3af;
     --white: #ffffff;
-    --section-bg: #1a1d27;
-    --border: #2d3348;
+    --section-bg: #0a0a0a;
+    --border: #1a1a1a;
     --font: 'Barlow', sans-serif;
     --font-cond: 'Barlow Condensed', sans-serif;
   }
@@ -58,7 +58,7 @@
     background: transparent;
     transition: background 0.35s ease, box-shadow 0.35s ease;
   }
-  nav.scrolled { background: var(--dark); box-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+  nav.scrolled { background: var(--dark); box-shadow: 0 2px 20px rgba(0,0,0,0.5); }
   .nav-inner {
     max-width: 1280px; margin: 0 auto;
     display: flex; align-items: center; justify-content: space-between;
@@ -104,7 +104,7 @@
   }
   .hero-bg::after {
     content: ''; position: absolute; inset: 0;
-    background: linear-gradient(to right, rgba(10,13,20,0.92) 45%, rgba(10,13,20,0.5) 100%);
+    background: linear-gradient(to right, rgba(0,0,0,0.95) 45%, rgba(0,0,0,0.6) 100%);
   }
   .hero-content {
     position: relative; z-index: 1;
@@ -113,7 +113,7 @@
   }
   .hero-badge {
     display: inline-flex; align-items: center; gap: 0.5rem;
-    background: rgba(249,115,22,0.15); border: 1px solid rgba(249,115,22,0.4);
+    background: rgba(8,145,178,0.15); border: 1px solid rgba(8,145,178,0.4);
     color: var(--orange); padding: 0.4rem 1rem; border-radius: 50px;
     font-size: 0.85rem; font-weight: 600; letter-spacing: 0.05em; margin-bottom: 1.5rem;
   }
@@ -189,7 +189,7 @@
   .service-card:hover { background: var(--dark3); }
   .service-card:hover::before { width: 100%; }
   .service-icon {
-    width: 52px; height: 52px; background: rgba(249,115,22,0.12);
+    width: 52px; height: 52px; background: rgba(8,145,178,0.12);
     border-radius: 8px; display: flex; align-items: center; justify-content: center;
     margin-bottom: 1.5rem;
   }
@@ -278,7 +278,7 @@
   .about-badge {
     position: absolute; bottom: -1.5rem; right: -1.5rem;
     background: var(--orange); color: #fff; padding: 1.5rem 2rem;
-    border-radius: 6px; text-align: center; box-shadow: 0 8px 32px rgba(249,115,22,0.35);
+    border-radius: 6px; text-align: center; box-shadow: 0 8px 32px rgba(8,145,178,0.35);
   }
   .about-badge .big { font-family: var(--font-cond); font-size: 2.5rem; font-weight: 800; line-height: 1; }
   .about-badge .small { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; opacity: 0.9; }
@@ -319,7 +319,7 @@
 
   /* ── CONTACT ── */
   .contact-layout { display: grid; grid-template-columns: 1fr 380px; gap: 4rem; }
-  .contact-form-wrap { background: var(--dark3); padding: 2.5rem; border-radius: 8px; border: 1px solid var(--border); box-shadow: 0 4px 24px rgba(0,0,0,0.3); }
+  .contact-form-wrap { background: var(--dark3); padding: 2.5rem; border-radius: 8px; border: 1px solid var(--border); box-shadow: 0 4px 24px rgba(0,0,0,0.5); }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   .form-group { margin-bottom: 1.25rem; }
   .form-group label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; color: #d1d5db; }
@@ -341,9 +341,9 @@
   .contact-info { display: flex; flex-direction: column; gap: 2rem; }
   .contact-info-card { display: flex; gap: 1.25rem; align-items: flex-start; }
   .contact-info-icon {
-    width: 48px; height: 48px; background: rgba(249,115,22,0.12); border-radius: 8px;
+    width: 48px; height: 48px; background: rgba(8,145,178,0.12); border-radius: 8px;
     display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-    border: 1px solid rgba(249,115,22,0.2);
+    border: 1px solid rgba(8,145,178,0.2);
   }
   .contact-info-icon svg { width: 22px; height: 22px; color: var(--orange); }
   .contact-info-card h4 { font-family: var(--font-cond); font-weight: 700; font-size: 1rem; letter-spacing: 0.03em; margin-bottom: 0.35rem; color: #fff; }
@@ -447,23 +447,14 @@
 </head>
 <body>
 
-<!-- COOKIE BANNER -->
-<!-- <div class="cookie-banner" id="cookieBanner">
-  <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
-  <div class="cookie-btns">
-    <button class="btn-decline" onclick="closeCookie()">Decline</button>
-    <button class="btn-accept" onclick="closeCookie()">Accept All</button>
-  </div>
-</div> -->
-
 <!-- NAV -->
 <nav id="navbar">
   <div class="nav-inner">
     <a href="#" class="logo">
       <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="36" height="36" rx="4" fill="#f97316"/>
+        <rect width="36" height="36" rx="4" fill="#0891b2"/>
         <path d="M8 26L18 10L28 26H8Z" fill="white"/>
-        <path d="M14 26V19H22V26" stroke="#f97316" stroke-width="2" fill="none"/>
+        <path d="M14 26V19H22V26" stroke="#0891b2" stroke-width="2" fill="none"/>
       </svg>
       <span class="logo-text">Elevated<span>Painting</span></span>
     </a>
@@ -720,13 +711,6 @@ craftsmanship across South Florida.</p>
             <div class="step-content">
               <h3>You'll forget a crew was ever in your home</h3>
               <p>We protect everything, clean completely, and treat your space as if it's our own. The only thing left behind is great work.</p>
-            </div>
-          </div>
-          <div class="process-step reveal" data-step="3">
-            <div class="step-num"></div>
-            <div class="step-content">
-              <h3></h3>
-              <p></p>
             </div>
           </div>
         </div>
@@ -989,7 +973,7 @@ craftsmanship across South Florida.</p>
     <p>Let our team turn your vision into reality. Request a free, no-obligation quote today.</p>
     <div class="cta-btns">
       <a href="#contact" class="btn-white">Get Free Estimate</a>
-      <a href="tel:5551234567" class="btn-outline-white">Call Us Now</a>
+      <a href="tel:7542672400" class="btn-outline-white">Call Us Now</a>
     </div>
   </div>
 </div>
@@ -1001,9 +985,9 @@ craftsmanship across South Florida.</p>
       <div class="footer-brand">
         <a href="#" class="logo" style="margin-bottom:.75rem;display:inline-flex">
           <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="height:32px">
-            <rect width="36" height="36" rx="4" fill="#f97316"/>
+            <rect width="36" height="36" rx="4" fill="#0891b2"/>
             <path d="M8 26L18 10L28 26H8Z" fill="white"/>
-            <path d="M14 26V19H22V26" stroke="#f97316" stroke-width="2" fill="none"/>
+            <path d="M14 26V19H22V26" stroke="#0891b2" stroke-width="2" fill="none"/>
           </svg>
           <span class="logo-text" style="font-size:1.2rem">Elevated<span>Painting</span></span>
         </a>
@@ -1042,13 +1026,13 @@ craftsmanship across South Florida.</p>
   </div>
 </footer>
 
-  <!-- MOBILE STICKY -->
-  <div class="mobile-sticky">
-    <a href="tel:5551234567" class="ms-call">Call Now</a>
-    <a href="#contact" class="ms-quote">Get Quote</a>
-  </div>
+<!-- MOBILE STICKY -->
+<div class="mobile-sticky">
+  <a href="tel:7542672400" class="ms-call">Call Now</a>
+  <a href="#contact" class="ms-quote">Get Quote</a>
+</div>
 
-  <script>
+<script>
   /* ── NAVBAR SCROLL ── */
   window.addEventListener('scroll', () => {
     const nav = document.getElementById('navbar');
@@ -1058,11 +1042,6 @@ craftsmanship across South Florida.</p>
   /* ── MOBILE MENU ── */
   function toggleMenu() {
     document.getElementById('mobileMenu').classList.toggle('open');
-  }
-
-  /* ── COOKIE ── */
-  function closeCookie() {
-    document.getElementById('cookieBanner').classList.add('hidden');
   }
 
   /* ── COUNTER ANIMATION ── */
