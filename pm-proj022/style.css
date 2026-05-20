@@ -146,7 +146,6 @@
       /* mantém proporção sem cortar */
       display: block;
       /* remove espaço inline extra */
-      background-image: url('img/logo.svg');
     }
 
     .logo-text {
@@ -268,7 +267,7 @@
     .hero-bg {
       position: absolute;
       inset: 0;
-      background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80');
+      background-image: url('img/Man-painting.jpeg');
       background-size: cover;
       background-position: center;
     }
@@ -277,7 +276,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to right, rgba(0, 0, 0, .95) 45%, rgba(0, 0, 0, .6) 100%);
+      background: linear-gradient(to right, rgba(0, 0, 0, .90) 45%, rgba(0, 0, 0, .10) 100%);
     }
 
     /* cyan accent line top */
@@ -905,7 +904,8 @@
       width: 100%;
       border-radius: 8px;
       object-fit: cover;
-      height: 500px;
+      height: 800px;
+      object-position: center top; /* ← adicione isso */
     }
 
     .about-badge {
@@ -1662,5 +1662,12 @@
 
       .about-content {
         padding-left: 0;
+      }
+
+      .about-img img {
+        height: auto;        /* altura automática baseada na proporção */
+        max-height: 500px;   /* limite máximo */
+        object-fit: contain; /* mostra a foto inteira sem cortar */
+        background: var(--dark); /* fundo caso sobre espaço */
       }
     }
