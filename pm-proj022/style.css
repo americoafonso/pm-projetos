@@ -180,7 +180,7 @@ nav.scrolled {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('img/Man-painting.jpeg');
+  background-image: url('img/man-painting.jpeg');
   background-size: cover;
   background-position: center;
 }
