@@ -517,29 +517,29 @@
       </div>
       <div class="contact-layout">
         <form class="contact-form-wrap reveal"
-              action="https://formsubmit.co/alfaomegasolutionforyou@gmail.com"
+              action="https://formsubmit.co/bids@getelevatedpainting.com"
               method="POST">
 
           <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
           <div class="form-row">
             <div class="form-group">
-              <label for="contact-name">Full Name</label>
+              <label for="contact-name">Full Name <span class="req">*</span></label>
               <input type="text" id="contact-name" name="name" placeholder="John Smith" required>
             </div>
             <div class="form-group">
-              <label for="contact-email">Email Address</label>
+              <label for="contact-email">Email Address <span class="req">*</span></label>
               <input type="email" id="contact-email" name="email" placeholder="john@example.com" required>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label for="contact-phone">Phone Number</label>
-              <input type="tel" id="contact-phone" name="phone" placeholder="(754) 267-2400">
+              <label for="contact-phone">Phone Number <span class="req">*</span></label>
+              <input type="tel" id="contact-phone" name="phone" placeholder="(754) 267-2400" required>
             </div>
             <div class="form-group">
-              <label for="contact-project">Project Type</label>
-              <select id="contact-project" name="project_type">
+              <label for="contact-project">Project Type <span class="req">*</span></label>
+              <select id="contact-project" name="project_type" required>
                 <option value="">Select a project type</option>
                 <option>Interior Painting</option>
                 <option>Exterior Painting</option>
@@ -551,8 +551,8 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="contact-message">Project Details</label>
-            <textarea id="contact-message" name="message" placeholder="Tell us about your project..."></textarea>
+            <label for="contact-message">Project Details <span class="req">*</span></label>
+            <textarea id="contact-message" name="message" placeholder="Tell us about your project..." required></textarea>
           </div>
           <button type="submit" class="form-submit">Send Message</button>
         </form>
