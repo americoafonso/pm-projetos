@@ -223,6 +223,68 @@ initBA('ba2', 'ba2after', 'ba2div', 'ba2handle');
   window.addEventListener('resize', () => { buildDots(); goTo(0); });
 })();
 
+/* ── SUCCESS TOAST ── */
+function showToast() {
+  const toast = document.getElementById('toast-success');
+  toast.classList.add('show');
+  setTimeout(closeToast, 5000);
+}
+
+function closeToast() {
+  document.getElementById('toast-success').classList.remove('show');
+}
+
+/* ── CONTACT FORM AJAX ── */
+(function () {
+  const form = document.querySelector('form.contact-form-wrap');
+  if (!form) return;
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    if (form.querySelector('[name="_honey"]').value) return;
+
+    const btn = form.querySelector('.form-submit');
+    const originalText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    try {
+      const res = await fetch('https://formsubmit.co/ajax/alfaomegasolutionforyou@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          name:          form.querySelector('[name="name"]').value,
+          email:         form.querySelector('[name="email"]').value,
+          phone:         form.querySelector('[name="phone"]').value,
+          project_type:  form.querySelector('[name="project_type"]').value,
+          message:       form.querySelector('[name="message"]').value,
+          _subject:      'New Quote Request – Elevated Painting',
+          _template:     'table',
+          _captcha:      'false',
+          _autoresponse: 'Thank you for reaching out to Elevated Painting! We received your quote request and will get back to you within 24 hours with a detailed estimate. — The Elevated Painting Team',
+        }),
+      });
+
+      if (res.ok) {
+        form.reset();
+        showToast();
+      } else {
+        btn.textContent = 'Error — try again';
+        setTimeout(() => { btn.disabled = false; btn.textContent = originalText; }, 3000);
+        return;
+      }
+    } catch {
+      btn.textContent = 'Error — try again';
+      setTimeout(() => { btn.disabled = false; btn.textContent = originalText; }, 3000);
+      return;
+    }
+
+    btn.disabled = false;
+    btn.textContent = originalText;
+  });
+})();
+
 /* ── PROCESS ── */
 document.querySelectorAll('.process-step').forEach(step => {
   step.addEventListener('click', () => {

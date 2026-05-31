@@ -986,6 +986,7 @@ nav.scrolled {
 }
 
 .form-submit:hover { background: var(--orange-d); }
+.form-submit:disabled { opacity: .65; cursor: not-allowed; }
 
 .contact-info { display: flex; flex-direction: column; gap: 2rem; }
 .contact-info-card { display: flex; gap: 1.25rem; align-items: flex-start; }
@@ -1289,4 +1290,94 @@ footer {
   }
 
   .ba-click-btn { font-size: .68rem; padding: .3rem .65rem; }
+}
+
+/* ── SUCCESS TOAST ── */
+.toast-success {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--dark3);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--green);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  min-width: 320px;
+  max-width: 400px;
+  box-shadow: 0 8px 32px rgba(0,0,0,.7);
+  transform: translateX(calc(100% + 2rem));
+  opacity: 0;
+  transition: transform .4s cubic-bezier(.4,0,.2,1), opacity .4s;
+  overflow: hidden;
+}
+
+.toast-success.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.toast-icon {
+  width: 36px; height: 36px;
+  background: var(--green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.toast-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+
+.toast-body strong { color: #fff; font-size: .95rem; font-weight: 700; }
+.toast-body span   { color: var(--text-light); font-size: .825rem; line-height: 1.4; }
+
+.toast-close {
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  font-size: .9rem;
+  padding: .25rem;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: color .2s;
+}
+
+.toast-close:hover { color: #fff; }
+
+.toast-progress {
+  position: absolute;
+  bottom: 0; left: 0;
+  height: 3px;
+  width: 100%;
+  background: var(--green);
+  transform-origin: left;
+}
+
+.toast-success.show .toast-progress {
+  animation: toastProgress 5s linear forwards;
+}
+
+@keyframes toastProgress {
+  from { transform: scaleX(1); }
+  to   { transform: scaleX(0); }
+}
+
+@media(max-width: 480px) {
+  .toast-success {
+    right: 1rem;
+    left: 1rem;
+    min-width: unset;
+    max-width: unset;
+  }
 }
