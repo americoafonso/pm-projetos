@@ -250,7 +250,7 @@ function closeToast() {
     btn.textContent = 'Sending…';
 
     try {
-      const res = await fetch('https://formsubmit.co/ajax/alfaomegasolutionforyou@gmail.com', {
+      const res = await fetch('https://formsubmit.co/ajax/bids@getelevatedpainting.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({
